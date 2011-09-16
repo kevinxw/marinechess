@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/thickbox-compressed.js"></script>
+<script type="text/javascript" src="js/army.basic.js"></script>
+<script type="text/javascript" src="js/army.player.js"></script>
+<script type="text/javascript" src="js/army.judge.js"></script>
+<script type="text/javascript" src="js/army.brain.js"></script>
+<script type="text/javascript" src="js/army.ui.js"></script>
+<script type="text/javascript" src="js/army.chessman.js"></script>
+<script type="text/javascript" src="js/army.game.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<title>陆战军旗</title>
+</head>
+
+<body>
+    <div class="hd">
+        <div class="warpper"><img src="img/hd.gif" class="hd_title"/></div>
+    </div>
+    <div class="main">
+        <div class="body_warpper">
+            <div id="desc">
+				<h3>简介</h3>
+				<p>此陆战军旗为翻翻AI版，由玩家与电脑对战。游戏一开始所有棋子随机摆放不可见，双方玩家轮流走一步，可掀开任意一颗棋子，也可以让自己的棋子行走。</p>
+
+				<h3>棋子大小</h3>
+				<p>地雷小于工兵；</p>
+				<p>司令 > 军长 > 师长 > 旅长 > 团长 > 营长 > 连长 > 排长 > 工兵</p>
+				<p>炸弹与任何棋子相遇时，双方都消失。</p>
+
+				<h3>开局</h3>
+				<p>第一个玩家翻开的棋子颜色就是第一个玩家的角色，另一种颜色则是对方的角色</p>
+
+				<h3>胜负</h3>
+				<p>对方三颗地雷都被工兵挖尽时可用己方任意一颗棋子抢军旗，抢到军旗者胜</p>
+				<p>对方棋子被杀尽或者只剩地雷和军旗时胜利</p>     
+                <span><a id="descCloseBtn" >关闭</a></span>
+            </div>
+			<div id="newTurnConfirm" style="display:none">
+				<h3>请选择先手或者后手</h3>
+				<p>先手将享受走第一步的权利</p><br/><br/>
+				
+                <p style="text-align:center;"><a id="fstHand" href="javascript:void(0)">先手</a>&nbsp;&nbsp;<a id="secHand" href="javascript:void(0)">后手</a>&nbsp;&nbsp;<a id="cancleStart" href="javascript:void(0)">取消</a></p>
+				
+            </div>
+            <div id="killedPieces0">
+                <span class="role">黑方被杀：</span>
+            </div>
+            <div id="board">
+                <!--<span class="pieces"></span>-->
+            </div>
+            <div id="killedPieces1">
+                <span class="role">红方被杀：</span>
+				<div class="funcBtns">
+					&nbsp;<a class="thickbox" href="#TB_inline?height=155&width=300&inlineId=newTurnConfirm&modal=true">新棋局</a>
+					<a href="javascript:void(0)" id="descBtn">游戏规则</a>
+				</div>
+				<span></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <img src="img/pieces.png" style="display:none"/>
+    </div>
+    <div class="footer">Copyright Kevin Xu Wang (kevixw'At'gmail.com) 2010 | Best Performance in Firefox3.5+</div>
+</body>
+</html> 
